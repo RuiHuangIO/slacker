@@ -1,10 +1,10 @@
-import express from "express";
-import { ApolloServer } from "apollo-server-express";
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
 
-import typeDefs from "./schema";
-import resolvers from "./resolvers";
+import typeDefs from './schema';
+import resolvers from './resolvers';
 
-import models from "./models";
+import models from './models';
 
 const app = express();
 

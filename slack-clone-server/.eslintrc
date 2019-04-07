@@ -1,12 +1,27 @@
 {
+  "extends": ["airbnb", "prettier"],
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "react-hooks"],
   "rules": {
-    "prettier/prettier": "error",
-    "no-console": 0
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 80
+      }
+    ],
+    "no-console": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
   }
 }
