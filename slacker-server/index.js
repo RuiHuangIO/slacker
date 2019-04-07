@@ -1,6 +1,6 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-
+import cors from 'cors';
 import path from 'path';
 
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas';
@@ -14,7 +14,15 @@ const resolvers = mergeResolvers(
 
 const app = express();
 
-const server = new ApolloServer({ typeDefs, resolvers });
+app.use(cors('localhost:3000'));
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: {
+    models,
+  },
+});
 server.applyMiddleware({ app });
 
 models.sequelize.sync().then(() => {

@@ -8,6 +8,8 @@
   "parser": "babel-eslint",
   "plugins": ["prettier", "react-hooks"],
   "rules": {
+    "consistent-return": 0,
+    "no-console": 0,
     "prettier/prettier": [
       "error",
       {
@@ -16,11 +18,16 @@
         "printWidth": 80
       }
     ],
-    "no-console": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": true
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
       }
     ]
   }

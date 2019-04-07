@@ -7,6 +7,10 @@ export default `
     users: [User!]!
   }
   type Mutation {
-    createChannel(teamId: Int!, name: String!, public: Boolean=false): Boolean!
+    createChannel(
+      teamId: Int!
+      name: String!
+      public: Boolean = false
+    ): Boolean!
   }
 `;
