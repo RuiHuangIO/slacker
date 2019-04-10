@@ -3,10 +3,11 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "commonjs": true
   },
   "parser": "babel-eslint",
-  "plugins": ["prettier", "react-hooks"],
+  "plugins": ["prettier", "react", "react-hooks"],
   "rules": {
     "consistent-return": 0,
     "no-console": 0,
